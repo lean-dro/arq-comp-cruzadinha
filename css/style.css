@@ -1,0 +1,45 @@
+input{
+    all: unset;
+    border: 1px solid black;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: black;
+    margin: 1px;
+    border-radius: 5px;
+}
+.linha{
+    display: flex;
+    flex-wrap: wrap;
+}
+.quadrado{
+    border: 1px solid transparent;
+    background-color: #3C93D1;
+    border-radius: 5px;
+    margin: 1px;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.certo{
+    background-color:#46D473;
+}
+.errado{
+    background-color: #D15452;
+}
+#div_cruzadinha{
+    height: 800px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
