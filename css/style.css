@@ -1,3 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Maven+Pro:wght@600&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+body{
+    font-family: 'Maven Pro', sans-serif;
+    overflow: hidden;
+}
+.conteudo{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 800px;
+    align-items: center;
+}
 input{
     all: unset;
     border: 1px solid black;
@@ -25,6 +39,7 @@ input{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: rotate(360deg);
     
 }
 .certo{
@@ -34,7 +49,7 @@ input{
     background-color: #D15452;
 }
 #div_cruzadinha{
-    height: 800px;
+    height: 750px;
     color: white;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,4 +57,78 @@ input{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#dicas{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    gap: 20px;
+    overflow-y: auto;
+   padding: 60px;
+}
+.dica{
+    width: 80%;
+}
+.titulo{
+    font-size: 30px; 
+    color: #3C93D1;
+}
+
+#modal{
+    display: none;
+    position: absolute;
+    height: 100vh;
+    z-index: 1;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.conteudo-modal{
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    justify-content: center;
+gap: 20px;
+}
+#modal.show{
+    display: flex!important;
+}
+.gif{
+    background-image: url('https://media.tenor.com/NoLjc6NLufoAAAAC/funk-lacoste.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 700px;
+    border-radius: 30px;
+    animation: gifs 5s linear 5s infinite alternate;
+}
+
+.texto{
+padding: 10px;
+   width: 30%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   text-align: center;
+    color: white;
+    font-size: 45px;
+    align-self: center;
+}
+
+@keyframes gifs {
+    0%{
+        background-image: url('https://media.tenor.com/NoLjc6NLufoAAAAC/funk-lacoste.gif');
+    }
+    25%{
+        background-image: url('https://media.tenor.com/hnqBvvsZwmEAAAAC/dançando-funk-dancando-funk.gif');
+    }
+    50%{
+        background-image: url('https://media.tenor.com/bpNg1Db8CsEAAAAC/dance.gif');
+    }
+    75%{
+        background-image: url('https://media.tenor.com/NoLjc6NLufoAAAAC/funk-lacoste.gif');
+    }
+    100%{
+        background-image: url('https://media.tenor.com/hnqBvvsZwmEAAAAC/dançando-funk-dancando-funk.gif');
+    }
 }
