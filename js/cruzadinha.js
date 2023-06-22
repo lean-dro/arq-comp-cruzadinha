@@ -1,3 +1,5 @@
+var erros = 0
+
 var respostas = [
     "CPU",
     "ULA",
@@ -68,7 +70,7 @@ div_cruzadinha.innerHTML = ""
             if(gabarito[i][j] != ""){
                 var letra = gabarito[i][j]
                 coordenadas.push({x:i, y: j, letra: letra})
-                divLinha.innerHTML += `<input id="input${i}${j}" onkeyup="adicionarLetra(this.value, ${i}, ${j}, this)">`
+                divLinha.innerHTML += `<input maxlength="1" id="input${i}${j}" onkeyup="adicionarLetra(this.value, ${i}, ${j}, this)">`
             }else{
                 divLinha.innerHTML += `<div id="${i}-${j}" class="quadrado"></div>`
             }
@@ -109,7 +111,8 @@ div_cruzadinha.innerHTML = ""
         input.classList.remove("certo")
         input.classList.add("errado")
         cruzadinha[x][y] = letra
-      
+        erros ++;
+        span_erros.innerHTML = erros
     }
     }
     validarCruzadinha()  
@@ -178,6 +181,9 @@ function trapaca() {
 }
 
 function validarCruzadinha() {
+    if(erros==3){
+        window.location.reload()
+    }
     var contagem = 0
     for(var i = 0; i < gabarito.length; i++){
         for(var j = 0; j < gabarito[i].length; j++){

@@ -70,8 +70,11 @@ input{
 .dica{
     width: 80%;
 }
+.dica>span{
+    font-size: 20px;
+}
 .titulo{
-    font-size: 30px; 
+    font-size: 35px; 
     color: #3C93D1;
 }
 
@@ -117,18 +120,21 @@ padding: 10px;
 
 @keyframes gifs {
     0%{
-        background-image: url('https://media.tenor.com/NoLjc6NLufoAAAAC/funk-lacoste.gif');
+        background-image: url('../gifs/funk-lacoste.gif');
     }
-    25%{
-        background-image: url('https://media.tenor.com/hnqBvvsZwmEAAAAC/dançando-funk-dancando-funk.gif');
+    20%{
+        background-image: url('../gifs/vital.gif');  
+    }
+    30%{
+        background-image: url('../gifs/dançando-funk-dancando-funk.gif');
     }
     50%{
-        background-image: url('https://media.tenor.com/bpNg1Db8CsEAAAAC/dance.gif');
+        background-image: url('../gifs/dance.gif');
     }
     75%{
-        background-image: url('https://media.tenor.com/NoLjc6NLufoAAAAC/funk-lacoste.gif');
+        background-image: url('../gifs/funk-lacoste.gif');
     }
     100%{
-        background-image: url('https://media.tenor.com/hnqBvvsZwmEAAAAC/dançando-funk-dancando-funk.gif');
+        background-image: url('../gifs/dançando-funk-dancando-funk.gif');
     }
 }
